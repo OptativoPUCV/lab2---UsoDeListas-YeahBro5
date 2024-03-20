@@ -95,7 +95,7 @@ void eliminaElementos(List*L, int elem)
         
       }
 
-      *dato = next(L);
+      dato = (int*) next(L);
     }
 }
 
