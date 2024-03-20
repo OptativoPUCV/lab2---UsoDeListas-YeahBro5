@@ -41,7 +41,8 @@ debes reservar memoria para cada elemento que agregues.
 Al finalizar retorna la lista creada.
 */
 
-List* crea_lista() {
+List* crea_lista()
+{
     List* L = create_list();
     for (int i = 1; i <= 10; i++) { 
         int* elemento = (int*)malloc(sizeof(int));
@@ -81,7 +82,21 @@ Asume que popCurrent luego de eliminar un elemento se
 posiciona en el elemento anterior.
 */
 
-void eliminaElementos(List*L, int elem){
+void eliminaElementos(List*L, int elem)
+{
+  int *dato = first(L);
+  while (dato != NULL)
+    {
+      if (*dato == elem)
+      {
+        popCurrent(L);
+        
+      }
+
+      dato = (int*)next(L);
+    }
+  
+  
 
 }
 
