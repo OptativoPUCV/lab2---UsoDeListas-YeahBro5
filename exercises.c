@@ -65,11 +65,10 @@ int sumaLista(List *L)
   int *elemento;
   
   elemento = (int*)first(L);
-  while (elemento != NULL)
+  while (elemento)
   {
     suma += *elemento;
     elemento = (int*)next(L);
-  
   }
    return suma;
 }
