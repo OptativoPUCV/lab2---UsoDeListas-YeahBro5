@@ -81,3 +81,20 @@ exercises.c:96:13: error: assignment to ‘int’ from ‘void *’ makes intege
 cc1: all warnings being treated as errors
 Compilation failed
 f2c2f7c
+Wed 20 Mar 2024 05:54:51 PM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:88:9: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   88 |   *dato = first(L);
+      |         ^
+exercises.c:98:13: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   98 |       *dato = next(L);
+      |             ^
+exercises.c:88:9: error: ‘dato’ is used uninitialized [-Werror=uninitialized]
+   88 |   *dato = first(L);
+      |   ~~~~~~^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b568246
