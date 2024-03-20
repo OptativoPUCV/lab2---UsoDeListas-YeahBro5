@@ -115,3 +115,14 @@ exercises.c:88:9: error: ‘dato’ is used uninitialized [-Werror=uninitialized
 cc1: all warnings being treated as errors
 Compilation failed
 863386a
+Wed 20 Mar 2024 05:55:26 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:98:13: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   98 |       *dato = next(L);
+      |             ^
+cc1: all warnings being treated as errors
+Compilation failed
+5ee4e6b
