@@ -179,3 +179,14 @@ Wed 20 Mar 2024 06:19:26 PM UTC:
  tests:  3|2
 total_score: 40/70
 ccf2d3b
+Wed 20 Mar 2024 11:26:16 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:92:16: error: comparison between pointer and integer [-Werror]
+   92 |       if (dato == elem)
+      |                ^~
+cc1: all warnings being treated as errors
+Compilation failed
+5f9767c
