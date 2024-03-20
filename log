@@ -70,3 +70,14 @@ Wed 20 Mar 2024 05:44:28 PM UTC:
  tests:  3|2
 total_score: 40/70
 cc38616
+Wed 20 Mar 2024 05:50:36 PM UTC: 
+ exercises.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:96:13: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   96 |       *dato = next(L);
+      |             ^
+cc1: all warnings being treated as errors
+Compilation failed
+f2c2f7c
