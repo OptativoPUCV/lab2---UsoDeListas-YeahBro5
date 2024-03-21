@@ -327,3 +327,14 @@ exercises.c:158:121: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 ad36a6e
+Thu 21 Mar 2024 03:48:06 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:157:25: error: initialization of ‘char’ from ‘char *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  157 |           char ultimo = (char*) top(auxiliar);
+      |                         ^
+cc1: all warnings being treated as errors
+Compilation failed
+5a28b54
