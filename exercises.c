@@ -135,11 +135,6 @@ void copia_pila(Stack* P1, Stack* P2)
 
   // Esta función elimina el primer elemento de la pila.
   //void *pop(Stack *stack) { return popFront(stack); }
-
-      
-
-
-  
 }
 
 /*
@@ -150,6 +145,30 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   return 0;
+  Stack* auxiliar = create_stack();
+  for (int i = 0; cadena[i] != '\0'; i++)
+    {
+      if (cadena[i] == '(') || (cadena[i] == '[') || (cadena[i] == '{')
+        {
+          push(auxiliar, cadena[i]);
+        }
+      else
+        {
+          char ultimo = top(auxiliar);
+          if (cadena[i] == ')' && ultimo == '(') || (cadena[i] == ']' && ultimo == '[') || (cadena[i] == '}' && ultimo == '{' || ultimo == '\0')
+            {
+              pop(auxiliar);
+            }
+        }
+      
+    }
+  if (top(auxiliar) == NULL)
+  {
+    return 0;
+  }
+
+  return 1;
+      
+
 }
 
