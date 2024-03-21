@@ -155,9 +155,9 @@ int parentesisBalanceados(char *cadena)
         }
       else
         {
-          char ultimo = *(char*)top(auxiliar); // primero se realiza el casting a char* pasar de void a char 
+          char* ultimo = (char*)top(auxiliar); // primero se realiza el casting a char* pasar de void a char 
                                                //y despues se tiene que desderenciar para acceder al valor
-          if ((cadena[i] == ')' && ultimo == '(') || (cadena[i] == ']' && ultimo == '[') || (cadena[i] == '}' && ultimo == '{')) 
+          if ((cadena[i] == ')' && *ultimo == '(') || (cadena[i] == ']' && *ultimo == '[') || (cadena[i] == '}' && *ultimo == '{')) 
             {
               pop(auxiliar);
             }
