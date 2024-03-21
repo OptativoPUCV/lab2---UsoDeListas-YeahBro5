@@ -235,3 +235,41 @@ exercises.c:151:29: error: expected expression before ‘||’ token
       |                             ^~
 Compilation failed
 64701c0
+Thu 21 Mar 2024 03:40:05 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:151:29: error: expected expression before ‘||’ token
+  151 |       if (cadena[i] == '(') || cadena[i] == '[' || cadena[i] == '{')
+      |                             ^~
+exercises.c:151:7: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  151 |       if (cadena[i] == '(') || cadena[i] == '[' || cadena[i] == '{')
+      |       ^~
+exercises.c:151:68: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  151 |       if (cadena[i] == '(') || cadena[i] == '[' || cadena[i] == '{')
+      |                                                                    ^
+exercises.c:151:68: error: expected statement before ‘)’ token
+exercises.c:153:32: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  153 |           push(auxiliar, cadena[i]);
+      |                          ~~~~~~^~~
+      |                                |
+      |                                char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:155:7: error: ‘else’ without a previous ‘if’
+  155 |       else
+      |       ^~~~
+exercises.c:157:25: error: initialization of ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  157 |           char ultimo = top(auxiliar);
+      |                         ^~~
+exercises.c:158:50: error: expected expression before ‘||’ token
+  158 |           if (cadena[i] == ')' && ultimo == '(') || (cadena[i] == ']' && ultimo == '[') || (cadena[i] == '}' && ultimo == '{' || ultimo == '\0')
+      |                                                  ^~
+cc1: all warnings being treated as errors
+Compilation failed
+d044a75
