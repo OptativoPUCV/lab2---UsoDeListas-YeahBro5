@@ -338,3 +338,14 @@ exercises.c:157:25: error: initialization of ‘char’ from ‘char *’ makes 
 cc1: all warnings being treated as errors
 Compilation failed
 5a28b54
+Thu 21 Mar 2024 03:53:49 AM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:158:25: error: initialization of ‘char’ from ‘char *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  158 |           char ultimo = (char*)top(auxiliar);
+      |                         ^
+cc1: all warnings being treated as errors
+Compilation failed
+7c080fe
