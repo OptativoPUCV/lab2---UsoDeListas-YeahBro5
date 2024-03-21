@@ -105,7 +105,40 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-void copia_pila(Stack* P1, Stack* P2) {
+void copia_pila(Stack* P1, Stack* P2) 
+{
+  Stack* auxiliar = create_stack();
+
+  while (top(P1) != NULL)
+    {
+      int* elemento = top(P1);
+      push(auxiliar, elemento);
+      pop(P1);
+    }
+  while (top(auxiliar) != NULL)
+    {
+      int* elemento2 = top(auxiliar);
+      push(P2, elemento2);
+      pop(auxiliar);
+    }
+
+  
+  // Esta función crea una pila vacía y devuelve un puntero a la pila.
+  //Stack *create_stack() { return create_list(); }
+
+  // Esta función inserta un nuevo elemento al inicio de la pila.
+  //void push(Stack *stack, void *data) { pushFront(stack, data); }
+
+  // Esta función devuelve un puntero al primer elemento de la pila.
+  //void *top(Stack *stack) { return first(stack); }
+
+  // Esta función elimina el primer elemento de la pila.
+  //void *pop(Stack *stack) { return popFront(stack); }
+
+      
+
+
+  
 }
 
 /*
