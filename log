@@ -273,3 +273,28 @@ exercises.c:158:50: error: expected expression before ‘||’ token
 cc1: all warnings being treated as errors
 Compilation failed
 d044a75
+Thu 21 Mar 2024 03:40:21 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:153:32: error: passing argument 2 of ‘push’ makes pointer from integer without a cast [-Werror=int-conversion]
+  153 |           push(auxiliar, cadena[i]);
+      |                          ~~~~~~^~~
+      |                                |
+      |                                char
+In file included from exercises.c:7,
+                 from test.c:5:
+stack.h:11:31: note: expected ‘void *’ but argument is of type ‘char’
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:157:25: error: initialization of ‘char’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  157 |           char ultimo = top(auxiliar);
+      |                         ^~~
+exercises.c:158:50: error: expected expression before ‘||’ token
+  158 |           if (cadena[i] == ')' && ultimo == '(') || (cadena[i] == ']' && ultimo == '[') || (cadena[i] == '}' && ultimo == '{' || ultimo == '\0')
+      |                                                  ^~
+cc1: all warnings being treated as errors
+Compilation failed
+0f50476
